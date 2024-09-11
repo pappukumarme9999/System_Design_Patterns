@@ -1,0 +1,15 @@
+Factory Method Pattern
+
+
+Definition:
+Defines an interface for creating an object, but allows subclasses to alter the type of objects that will be created.
+
+Use Case:
+When you need to create objects, but the exact class of the object is not known until runtime.
+
+Real-Life Example:
+Consider a food delivery system. Depending on the type of restaurant (Italian, Indian, etc.), you will get different types of food. The factory method can return the appropriate type of food based on the restaurant.
+
+Real-Life Application:
+GUI Frameworks: Different buttons or windows are created based on the operating system or user input.
+Document Creation: For applications like MS Office, different types of documents (Word, Excel, etc.) can be created using the factory method.

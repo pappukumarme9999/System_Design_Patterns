@@ -1,0 +1,16 @@
+Abstract Factory Pattern
+
+
+Definition:
+Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+Use Case:
+When you want to create a group of related objects, and the concrete types of those objects vary, but they must all adhere to a common theme.
+
+Real-Life Example:
+Imagine you are designing a furniture store. Depending on the style (Modern, Victorian), you will need a consistent set of furniture, such as chairs and tables.
+
+
+Real-Life Application:
+UI Themes: Creating themed components like buttons, windows, and sliders that adhere to a specific look and feel (e.g., dark mode vs. light mode).
+Cross-platform Libraries: Libraries that generate UI elements for different platforms (Windows, macOS, Linux) using abstract factories.

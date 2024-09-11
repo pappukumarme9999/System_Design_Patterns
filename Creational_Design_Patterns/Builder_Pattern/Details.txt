@@ -1,0 +1,13 @@
+Builder Pattern
+Definition:
+Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+
+Use Case:
+When you want to construct an object step-by-step and avoid a complex constructor with many parameters.
+
+Real-Life Example:
+Consider creating a meal in a fast food restaurant. You can have different items (burger, drink, fries) in the meal, but the builder pattern allows you to specify how to assemble the meal.
+
+Real-Life Application:
+Form Creation: When you want to build complex web forms or objects in a step-by-step manner.
+Game Characters: Constructing game characters or cars in a racing game where each component (wheels, engine, body) is built separately.

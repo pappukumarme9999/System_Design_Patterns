@@ -1,0 +1,15 @@
+Singleton Pattern
+
+
+Definition:
+Ensures a class has only one instance and provides a global point of access to it.
+
+Use Case:
+When you need to manage a single instance of a class for the entire application, such as logging, configuration settings, or database connections.
+
+Real-Life Example:
+Imagine a printer in an office. Everyone needs to use the same printer, and we don’t want multiple instances of the printer being used at the same time.
+
+Real-Life Application:
+Database Connection Pooling: Only one instance of a database connection pool is created to manage all connections in the application.
+Logger Classes: There should be one log file written to by the entire system, avoiding multiple log instances.
