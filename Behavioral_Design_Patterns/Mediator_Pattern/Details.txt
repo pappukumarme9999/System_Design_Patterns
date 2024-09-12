@@ -1,0 +1,19 @@
+Mediator Pattern
+Definition:
+The Mediator Pattern defines an object that encapsulates how a set of objects interact. The mediator centralizes complex communications and controls the interaction between collaborating objects.
+
+Real-life Example:
+Air Traffic Control: ATC coordinates communication between different aircraft to ensure they don’t collide and follow the right flight paths.
+
+
+Colleague <--> Mediator <--> Colleague
+
+
+Use Case:
+Chat applications where a central chat room (mediator) manages communication between multiple users.
+Coordinating complex workflows in GUI-based applications.
+
+
+Robustness Features:
+Decoupling of Colleagues: Mediator centralizes communication logic, which makes the system easier to maintain.
+Scalability: It simplifies adding new components (colleagues) to the system.

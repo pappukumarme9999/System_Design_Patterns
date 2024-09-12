@@ -1,0 +1,13 @@
+Definition:
+The Decorator Pattern allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
+
+Real-life Example:
+A coffee can be enhanced by adding ingredients such as milk, sugar, or cream, without changing the base coffee class.
+
+Component --> Concrete Component & Decorator --> Concrete Decorators
+
+
+Efficiency & Robustness Features:
+
+Flexible Object Composition: Allows adding responsibilities dynamically.
+Composability: Multiple decorators can be applied independently.

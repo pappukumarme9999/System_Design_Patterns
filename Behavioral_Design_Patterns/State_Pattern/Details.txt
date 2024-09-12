@@ -1,0 +1,20 @@
+State Pattern
+Definition:
+The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+Real-life Example:
+Traffic Lights: The behavior of a traffic light changes based on its current state (green, yellow, red).
+
+
+Context <--> State (many states)
+
+
+Use Case:
+Finite-state machines such as workflow systems.
+Vending machines with different operational states.
+
+
+
+Robustness Features:
+State Transitions: Objects can switch states without changing their class.
+Scalability: Easily add new states without affecting the existing system.

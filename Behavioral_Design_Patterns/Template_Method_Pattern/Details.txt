@@ -1,0 +1,19 @@
+Template Method Pattern
+Definition:
+The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+Real-life Example:
+Recipe App: Different recipes follow the same basic template, but the steps can vary.
+
+
+Abstract Class <--> ConcreteClass1, ConcreteClass2
+
+
+Use Case:
+Processing algorithms in frameworks.
+Workflow systems where basic steps are predefined, but some steps are customizable.
+
+
+Robustness Features:
+Reusable Algorithm Skeleton: Core algorithm remains unchanged, but certain steps can be customized.
+Avoids Code Duplication: Reduces redundancy by using a template for similar operations.

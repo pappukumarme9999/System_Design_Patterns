@@ -1,0 +1,18 @@
+Interpreter Pattern
+Definition:
+The Interpreter Pattern defines a grammatical representation for a language and an interpreter that uses this representation to interpret sentences in the language.
+
+Real-life Example:
+A simple calculator that can parse and interpret expressions like 5 + 3.
+
+Context --> AbstractExpression --> TerminalExpression & NonTerminalExpression
+
+
+Use Case:
+Expression evaluation in compilers and calculators.
+Interpreting domain-specific languages.
+
+Robustness Features:
+Error Handling: Validate the expression to handle invalid syntax.
+Complex Expression Handling: Extend the interpreter to handle more complex operations like subtraction or multiplication.
+

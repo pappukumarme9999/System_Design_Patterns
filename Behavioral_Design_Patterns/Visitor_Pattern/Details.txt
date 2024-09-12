@@ -1,0 +1,19 @@
+Visitor Pattern
+Definition:
+The Visitor Pattern represents an operation to be performed on the elements of an object structure. The visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+Real-life Example:
+Tax Calculation: A tax system where different tax rates are applied to different types of goods.
+
+
+Visitor <--> Concrete Element1, Concrete Element2
+
+
+Use Case:
+Applying operations to a family of objects (e.g., discount calculations on a shopping cart).
+Extending functionality in large object structures without modifying existing classes.
+
+
+Robustness Features:
+Extensibility: Easily add new operations without modifying existing object structures.
+Separation of Concerns: Logic of the operation is separated from the object structure.

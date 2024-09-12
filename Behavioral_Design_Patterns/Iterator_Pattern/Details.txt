@@ -1,0 +1,20 @@
+Iterator Pattern
+Definition:
+The Iterator Pattern provides a way to access elements of an aggregate object sequentially without exposing its underlying representation.
+
+Real-life Example:
+Iterating through a list of songs in a playlist.
+
+
+Iterator --> ConcreteIterator
+Aggregate --> ConcreteAggregate
+
+
+Use Case:
+Navigating through a collection (e.g., a list, tree, or graph).
+Simplifying the traversal of complex data structures.
+
+
+Robustness Features:
+Safe Traversal: Ensure thread safety when iterating over collections.
+Lazy Loading: Implement lazy evaluation for large data sets.

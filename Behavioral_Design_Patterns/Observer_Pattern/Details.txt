@@ -1,0 +1,14 @@
+Observer Pattern
+Definition:
+The Observer Pattern defines a one-to-many relationship between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+Real-life Example:
+News Subscription: Users subscribe to a news channel and get updates when new content is published.
+
+Subject <--> Observer (1-to-many)
+
+
+Use Case:
+Event handling in GUI frameworks.
+Notification systems in applications like news apps or social media.
+

@@ -1,0 +1,16 @@
+Bridge Pattern
+Definition:
+The Bridge Pattern decouples an abstraction from its implementation, allowing both to vary independently. It separates the abstraction and implementation into separate class hierarchies.
+
+Real-life Example:
+Consider a Remote Control as an abstraction that controls devices such as a TV or a Radio. The implementation of turning devices on/off can differ for each device.
+
+
+Abstraction --> Bridge --> Implementation
+
+
+
+Efficiency & Robustness Features:
+
+Separation of Concerns: Decoupling the abstraction from its implementation makes it easier to maintain and extend.
+Enhanced Extendability: You can add more device types or remote types without affecting the existing code.

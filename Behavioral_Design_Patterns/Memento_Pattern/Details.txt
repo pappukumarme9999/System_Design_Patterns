@@ -1,0 +1,20 @@
+Memento Pattern
+Definition:
+The Memento Pattern captures and externalizes an object’s internal state so that the object can be restored to this state later without violating encapsulation.
+
+Real-life Example:
+Undo functionality in text editors.
+
+
+Originator <--> Memento <--> Caretaker
+
+
+
+Use Case:
+Implementing undo/redo operations.
+Managing state history in applications like games or document editors.
+
+
+Robustness Features:
+Undo/Redo: Easily implements undo/redo functionality.
+Encapsulation: Memento doesn’t expose the internal state of objects.

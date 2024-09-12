@@ -1,0 +1,19 @@
+Composite Pattern
+Definition:
+The Composite Pattern allows you to treat individual objects and compositions of objects uniformly. It enables creating tree-like structures where individual objects and composites can be treated the same way.
+
+Real-life Example:
+A file system where a directory can contain both files and subdirectories, and both can be treated the same way.
+
+
+Component (FileSystemItem) --> Leaf (File) & Composite (Directory)
+
+
+
+Efficiency & Robustness Features:
+
+Unified Management: Both files and directories are handled uniformly.
+
+Recursive Structure: Easy to handle complex structures with recursion.
+
+The Composite Pattern allows for efficient traversal of tree-like structures, as it can be implemented using recursion.

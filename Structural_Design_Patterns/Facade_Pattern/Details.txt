@@ -1,0 +1,15 @@
+Facade Pattern
+
+Definition:
+The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. It defines a higher-level interface that makes the subsystem easier to use.
+
+Real-life Example:
+A Home Theater System has multiple components (TV, Sound System, etc.), but the Facade can provide a simplified interface to control the whole system.
+
+Subsystem Classes --> Facade --> Client
+
+
+Efficiency & Robustness Features:
+
+Simplified Interface: Users don’t need to deal with subsystem complexities.
+Subsystem Management: Allows encapsulating complex operations into simple methods.

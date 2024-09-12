@@ -1,0 +1,16 @@
+Flyweight Pattern
+Definition:
+The Flyweight Pattern is used to minimize memory usage by sharing as much data as possible with similar objects. This is typically used for large numbers of objects.
+
+Real-life Example:
+In a text editor, every character typed is an object. Instead of creating a new object for each instance of 'a', the system can reuse the same 'a' object.
+
+
+FlyweightFactory --> Flyweight (Shared Object)
+
+
+
+Efficiency & Robustness Features:
+
+Memory Optimization: Reduces the number of objects created by sharing.
+Lazy Initialization: Flyweight objects are created only when needed.

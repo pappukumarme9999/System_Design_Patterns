@@ -1,0 +1,14 @@
+Behavioral patterns focus on communication between objects, how they interact, and their responsibilities.
+
+Types of Behavioral Design Patterns:
+Chain of Responsibility Pattern
+Command Pattern
+Interpreter Pattern
+Iterator Pattern
+Mediator Pattern
+Memento Pattern
+Observer Pattern
+State Pattern
+Strategy Pattern
+Template Method Pattern
+Visitor Pattern

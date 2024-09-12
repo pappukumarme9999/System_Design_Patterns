@@ -1,0 +1,19 @@
+Strategy Pattern
+Definition:
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. The strategy lets the algorithm vary independently from the clients that use it.
+
+Real-life Example:
+Payment System: A system where you can choose from multiple payment strategies such as credit card, PayPal, or crypto.
+
+
+Context <--> Strategy (many algorithms)
+
+
+Use Case:
+Payment gateways in e-commerce platforms.
+Sorting algorithms in software.
+
+
+Robustness Features:
+Algorithm Flexibility: Easily switch between algorithms at runtime.
+Open/Closed Principle: New algorithms can be added without modifying existing code.

@@ -1,0 +1,1 @@
+Structural patterns deal with object composition and the relationships between objects, helping you ensure that if one part of a system changes, the entire system does not need to change.

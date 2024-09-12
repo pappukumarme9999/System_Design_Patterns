@@ -1,0 +1,22 @@
+Chain of Responsibility Pattern
+Definition:
+The Chain of Responsibility Pattern creates a chain of receiver objects for a request. This pattern decouples the sender and receiver of a request, giving more than one object a chance to handle the request.
+
+Real-life Example:
+Helpdesk System: A helpdesk system where requests are escalated through a chain of handlers based on priority.
+
+
+Handler <--> NextHandler <--> ConcreteHandler1, ConcreteHandler2
+
+
+
+Use Case:
+Logging frameworks that allow different levels of logging (INFO, DEBUG, ERROR).
+Support systems where a request is passed through different levels of support.
+Handling HTTP requests at different levels in a web server.
+
+Robustness Features:
+Request Processing Flexibility: Requests can be handled by multiple objects in sequence.
+Decoupling: Decouples the sender and receiver, allowing for more flexible processing chains.
+Dynamic Handler Chain: Easily modify the chain without changing the existing code.
+Error Handling: Ensure that a fallback handler processes any request that isn’t handled.

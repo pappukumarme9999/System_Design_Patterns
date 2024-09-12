@@ -1,0 +1,17 @@
+Proxy Pattern
+
+
+Definition:
+The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.
+
+Real-life Example:
+A Bank Account can be represented by a proxy that controls access to the account details. Only authorized users can access sensitive data.
+
+
+Real Subject --> Proxy --> Client
+
+
+Efficiency & Robustness Features:
+
+Access Control: Proxy ensures only authenticated access to sensitive data.
+Lazy Initialization: The real subject is only accessed when necessary.
