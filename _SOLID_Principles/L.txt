@@ -1,0 +1,54 @@
+3. Liskov Substitution Principle (LSP)
+
+
+Definition: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.-----------
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example: Bird Behavior
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Non-SOLID: A Bird class where some birds can't fly, leading to problematic behavior when replaced.
+
+class Bird {
+    public void fly() {
+        System.out.println("Flying");
+    }
+}
+
+class Ostrich extends Bird {
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Ostriches can't fly");
+    }
+}
+
+
+Problem: Ostrich can't fly, but it inherits the fly method from Bird, violating the LSP principle.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+SOLID Code:
+
+abstract class FlyingBird{
+   abstract void fly();
+}
+
+abstract class NonFlyingBird{
+   abstract void doSomething();
+}
+
+class Eagle extends FlyingBird {
+   @Override
+   public void fly() { // some implementation }
+}
+
+class Ostrich extends NonFlyingBird {
+   @Override
+   public void doSomething() { // some implementation }
+}
+
+Solution: we can create a separate class for birds that can fly and have the Eagle extend it, while other birds can extend a different class, which will not include any fly behavior.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+

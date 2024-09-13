@@ -1,0 +1,82 @@
+4. Interface Segregation Principle (ISP)
+
+
+Definition: Clients should not be forced to implement interfaces they don’t use.
+            Here your main goal is to focus on avoiding fat interface and give preference to many small client-specific interfaces. 
+            You should prefer many client interfaces rather than one general interface and each interface should have a specific responsibility.
+
+    Suppose if you enter a restaurant and you are pure vegetarian. 
+    The waiter in that restaurant gave you the menu card which includes vegetarian items, non-vegetarian items, drinks, and sweets.
+
+    In this case, as a customer, you should have a menu card which includes only vegetarian items, not everything which you don’t eat in your food. 
+    Here the menu should be different for different types of customers.
+    The common or general menu card for everyone can be divided into multiple cards instead of just one. 
+    Using this principle helps in reducing the side effects and frequency of required changes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example: A Printer
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Non-SOLID: A Printer interface that forces all printers to implement methods for both printing and scanning.
+
+interface Printer {
+    void print(String document);
+    void scan(String document);
+}
+
+class BasicPrinter implements Printer {
+    @Override
+    public void print(String document) {
+        System.out.println("Printing: " + document);
+    }
+
+    @Override
+    public void scan(String document) {
+        // BasicPrinter can't scan, but must implement this method.
+    }
+}
+
+
+Problem: The BasicPrinter class is forced to implement the scan method even though it doesn't support scanning.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+SOLID Code:
+
+// Printer.java
+interface Printer {
+    void print(String document);
+}
+
+// Scanner.java
+interface Scanner {
+    void scan(String document);
+}
+
+// BasicPrinter.java
+class BasicPrinter implements Printer {
+    @Override
+    public void print(String document) {
+        System.out.println("Printing: " + document);
+    }
+}
+
+// MultiFunctionPrinter.java
+class MultiFunctionPrinter implements Printer, Scanner {
+    @Override
+    public void print(String document) {
+        System.out.println("Printing: " + document);
+    }
+
+    @Override
+    public void scan(String document) {
+        System.out.println("Scanning: " + document);
+    }
+}
+
+
+Solution: By splitting the Printer interface into two interfaces (Printer and Scanner), we ensure that each class only implements the interfaces it needs.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,53 @@
+The system allows users to pay using different methods such as Credit Card, PayPal, and Google Pay. Additionally, we want to send notifications to the users about the payment status through different mediums like Email or SMS.
+
+
+
+SOLID Code:
+1. Single Responsibility Principle (SRP):
+Each class should handle only one responsibility.
+Example: The PaymentProcessor class handles payments, while the NotificationService handles sending notifications.
+
+
+2. Open/Closed Principle (OCP):
+New payment methods can be added by extending existing functionality without modifying existing code.
+Example: We can extend PaymentMethod to add new payment methods like GooglePay, CreditCard, etc., without changing existing logic.
+
+
+3. Liskov Substitution Principle (LSP):
+Subclasses should be replaceable with their parent classes without breaking functionality.
+Example: We should be able to replace PayPalPayment, CreditCardPayment, or GooglePayPayment with PaymentMethod without breaking the system.
+
+
+4. Interface Segregation Principle (ISP):
+Interfaces should be client-specific rather than large general-purpose interfaces.
+Example: Separate interfaces for MessageService, PaymentMethod, and PaymentService.
+
+
+5. Dependency Inversion Principle (DIP):
+High-level modules should depend on abstractions, not on concrete implementations.
+Example: PaymentProcessor depends on the PaymentMethod interface, and NotificationService depends on MessageService.
+
+
+
+
+
+
+Explanation of the Code and Process Flow
+
+
+Payment Methods and SRP:
+
+Each payment method (CreditCardPayment, PayPalPayment, etc.) has a single responsibility: to process payments.
+The PaymentProcessor class handles the process logic without knowing the details of how each payment method works.
+Adding Payment Methods and OCP:
+
+The code is open for extension because we can easily add more payment methods like GooglePayPayment by implementing the PaymentMethod interface without changing the PaymentProcessor.
+Replacing Payment Methods and LSP:
+
+The PaymentProcessor can accept any class that implements the PaymentMethod interface, following LSP. This allows replacing CreditCardPayment with PayPalPayment without breaking the system.
+Interface Segregation and ISP:
+
+We have separate interfaces for MessageService and PaymentMethod. Each interface is focused on a specific action, avoiding large, general-purpose interfaces. This allows us to only implement the methods relevant to a class.
+Dependency Inversion and DIP:
+
+Both PaymentProcessor and NotificationService depend on abstractions (PaymentMethod and MessageService), not on concrete classes. This makes the code more flexible and testable.

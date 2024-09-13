@@ -1,0 +1,77 @@
+5. Dependency Inversion Principle (DIP)
+
+Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions.
+            Additionally, abstractions should not depend on details. Details should depend on abstractions.
+
+    In simpler terms, the DIP suggests that classes should rely on abstractions (e.g., interfaces or abstract classes) rather than concrete implementations.
+    This allows for more flexible and decoupled code, making it easier to change implementations without affecting other parts of the codebase.
+
+    Let’s understand Dependency Inversion Principle using an example:
+    In a software development team, developers depend on an abstract version control system (e.g., Git) to manage and track changes to the codebase. 
+    They don’t depend on specific details of how Git works internally.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example: Notification System
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Non-SOLID: 
+
+public interface Notification {
+    void notify();
+}
+
+public class EmailNotification implements Notification {
+    public void notify() {
+        System.out.println("Sending notification via email");
+    }
+}
+
+public class Employee {
+    private EmailNotification emailNotification; 
+    public Employee(EmailNotification emailNotification) {
+        this.emailNotification = emailNotification;
+    }
+    public void notifyUser() {
+        emailNotification.notify();
+    }
+}
+
+
+Problem: the Employee class depends directly on the EmailNotification class, which is a low-level module. This violates the dependency inversion principle.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+SOLID Code:
+
+public interface Notification{
+  public void notify();
+}
+
+public class Employee{
+  private Notification notification;
+  public Employee(Notification notification){
+      this.notification = notification;
+  }
+  public void notifyUser(){
+    notification.notify();
+  }
+ }
+
+ public class EmailNotification implements Notification{
+    public void notify(){
+        //implement notification via email 
+    }
+ }
+
+ public static void main(String [] args){
+    Notification notification = new EmailNotification();
+    Employee employee = new Employee(notification);
+    employee.notifyUser();
+ }
+
+
+Solution: Employee is not dependent on any concrete implementation, rather, it depends only on the abstraction (notification interface).
+            If we need to change the notification mode, we can create a new implementation and pass it to the Employee.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
