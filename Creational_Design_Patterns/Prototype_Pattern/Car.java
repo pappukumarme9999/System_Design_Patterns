@@ -1,6 +1,9 @@
 package Creational_Design_Patterns.Prototype_Pattern;
 
-public class Car implements Cloneable {
+// Concrete Prototype
+
+
+public class Car implements Prototype {
     private String model;
     private String engine;
 
@@ -9,22 +12,18 @@ public class Car implements Cloneable {
         this.engine = engine;
     }
 
+    // Copy constructor for cloning
+    public Car(Car car) {
+        this.model = car.model;
+        this.engine = car.engine;
+    }
+
     @Override
     public Car clone() {
-        try {
-            return (Car) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new AssertionError();
-        }
+        return new Car(this);  // Cloning the car object
     }
 
-    @Override
-    public String toString() {
-        return "Car [model=" + model + ", engine=" + engine + "]";
+    public void showDetails() {
+        System.out.println("Car Model: " + model + ", Engine: " + engine);
     }
 }
-
-// Handle deep cloning for nested objects.
-// Implement defensive cloning to protect against mutations.
-// Deep Cloning: Support for deep cloning can be added to handle nested objects.
-// Exception Handling: Protect against cloning exceptions using AssertionError.

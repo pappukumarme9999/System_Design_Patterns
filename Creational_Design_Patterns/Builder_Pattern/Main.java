@@ -1,13 +1,21 @@
-package Creational_Design_Patterns.Builder_Pattern;
+package Creational_Design_Patterns.Builder_Pattern.House_Construction;
+
+// Client 
 
 public class Main {
     public static void main(String[] args) {
-        Meal meal = new Meal.MealBuilder()
-            .setBurger("Cheeseburger")
-            .setDrink("Coke")
-            .setFries("Large Fries")
-            .build();
+        // Create a Simple House
+        HouseBuilder simpleBuilder = new SimpleHouseBuilder();
+        HouseDirector director = new HouseDirector(simpleBuilder);
+        director.constructSimpleHouse();
+        House simpleHouse = simpleBuilder.getResult();
+        System.out.println(simpleHouse);
 
-        System.out.println(meal);  // Output: Meal [burger=Cheeseburger, drink=Coke, fries=Large Fries]
+        // Create a Luxury House
+        HouseBuilder luxuryBuilder = new LuxuryHouseBuilder();
+        director.changeBuilder(luxuryBuilder);
+        director.constructLuxuryHouse();
+        House luxuryHouse = luxuryBuilder.getResult();
+        System.out.println(luxuryHouse);
     }
 }

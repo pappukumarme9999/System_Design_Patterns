@@ -5,7 +5,7 @@ Definition:
 The Adapter Pattern allows two incompatible interfaces to work together. It acts as a bridge between two different interfaces, allowing classes to collaborate.
 
 Real-life Example:
-Suppose you have a HDMI interface and a VGA device, but your system only accepts HDMI. You can create an adapter that allows a VGA device to plug into an HDMI port.
+Suppose you have a High-Definition Multimedia Interface(HDMI) interface and a  Video Graphics Array(VGA) device, but your system only accepts HDMI. You can create an adapter that allows a VGA device to plug into an HDMI port.
 
 
 Client --> Adapter --> Adaptee

@@ -8,7 +8,7 @@ public class HDMIAdapter implements HDMI {
     }
 
     @Override
-    public void connectWithHDMI() {
+    public void connectHDMI() {
         vgaConnector.connectWithVGA();
         System.out.println("Adapter converts VGA signal to HDMI.");
     }
